@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajay's Profile 1910 | Maddula Ajay Rathna - Data Analyst</title>
+  <meta name="description" content="Portfolio of Maddula Ajay Rathna - Data Analyst skilled in Python, SQL, Tableau, Predictive Modeling, and Business Intelligence.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Oswald:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: '#FF2A2A',
+            darkBg: '#050505',
+            darkCard: '#0A0A0A',
+            darkElevated: '#101010',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Oswald', 'Impact', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#050505] text-white antialiased selection:bg-brandRed selection:text-white min-h-screen">
+
+  <!-- Sticky Glassmorphic Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-2.5 group">
+        <div class="w-9 h-9 rounded-lg bg-black border border-white/20 flex items-center justify-center group-hover:border-brandRed transition-colors">
+          <span class="font-display font-bold text-lg text-white group-hover:text-brandRed transition-colors">AR</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold tracking-wider text-base uppercase leading-tight">AJAY RATHNA</span>
+          <span class="text-[10px] font-mono text-gray-400 tracking-widest uppercase">DATA ANALYST</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-xs font-mono uppercase tracking-wider text-gray-400">
+        <a href="#about" class="nav-item hover:text-brandRed transition-colors">About</a>
+        <a href="#skills" class="nav-item hover:text-brandRed transition-colors">Skills</a>
+        <a href="#experience" class="nav-item hover:text-brandRed transition-colors">Experience</a>
+        <a href="#projects" class="nav-item hover:text-brandRed transition-colors">Projects</a>
+        <a href="#simulator" class="nav-item hover:text-brandRed transition-colors">Live Demo</a>
+        <a href="#education" class="nav-item hover:text-brandRed transition-colors">Education</a>
+        <a href="#contact" class="nav-item hover:text-brandRed transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Action CTAs -->
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="resume.html" target="_blank" class="px-4 py-2 text-xs font-mono tracking-wider uppercase border border-white/20 rounded-lg hover:border-brandRed hover:text-brandRed transition-all flex items-center gap-2">
+          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+          <span>Resume</span>
+        </a>
+        <a href="#contact" class="px-5 py-2 text-xs font-mono tracking-wider uppercase bg-brandRed text-white font-bold rounded-lg hover:bg-red-600 transition-all shadow-[0_0_15px_rgba(255,42,42,0.4)] flex items-center gap-2">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-400 hover:text-white" aria-label="Toggle Navigation">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a0a] border-b border-white/10 px-6 py-6 space-y-4 font-mono text-sm uppercase">
+      <a href="#about" class="mobile-nav-link block py-2 text-gray-300 hover:text-brandRed">About</a>
+      <a href="#skills" class="mobile-nav-link block py-2 text-gray-300 hover:text-brandRed">Skills</a>
+      <a href="#experience" class="mobile-nav-link block py-2 text-gray-300 hover:text-brandRed">Experience</a>
+      <a href="#projects" class="mobile-nav-link block py-2 text-gray-300 hover:text-brandRed">Projects</a>
+      <a href="#simulator" class="mobile-nav-link block py-2 text-gray-300 hover:text-brandRed">Live Demo</a>
+      <a href="#education" class="mobile-nav-link block py-2 text-gray-300 hover:text-brandRed">Education</a>
+      <a href="#contact" class="mobile-nav-link block py-2 text-gray-300 hover:text-brandRed">Contact</a>
+      <div class="pt-4 border-t border-white/10 flex flex-col gap-3">
+        <a href="resume.html" target="_blank" class="w-full py-2.5 text-center text-xs font-mono uppercase border border-white/20 rounded-lg text-white hover:border-brandRed">View Resume</a>
+        <a href="#contact" class="w-full py-2.5 text-center text-xs font-mono uppercase bg-brandRed text-white font-bold rounded-lg">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="home" class="relative min-h-screen pt-32 pb-20 flex flex-col justify-center overflow-hidden bg-grid-pattern">
+    <!-- Giant Background Watermark (sreestats.in style) -->
+    <div class="watermark-text absolute top-20 left-1/2 -translate-x-1/2 w-full text-center text-[18vw] sm:text-[13vw] lg:text-[9rem] opacity-10 whitespace-nowrap overflow-hidden">
+      DATA ANALYST
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Status Pill -->
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-white/10 bg-black/60 backdrop-blur-md">
+            <span class="status-beacon-dot"></span>
+            <span class="text-xs font-mono tracking-wider uppercase text-gray-300">Available for Opportunities • Bangalore / Chennai</span>
+          </div>
+
+          <!-- Hero Name & Title -->
+          <div class="space-y-2">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-bold tracking-tight uppercase leading-none">
+              Maddula Ajay <span class="text-brandRed">Rathna</span>
+            </h1>
+            <div class="flex items-center gap-3">
+              <span class="h-0.5 w-10 bg-brandRed"></span>
+              <p class="text-lg sm:text-xl font-mono text-gray-300 font-medium">
+                Data Analyst & Business Intelligence Specialist
+              </p>
+            </div>
+          </div>
+
+          <!-- Bio Pitch -->
+          <p class="text-base sm:text-lg text-gray-400 max-w-2xl leading-relaxed">
+            Detail-oriented Data Analyst experienced in gathering, cleansing, and modeling large datasets to produce actionable business insights. Transforming complex data into scalable SQL pipelines, statistical forecasts, and high-impact Tableau dashboards.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3.5 bg-brandRed text-white font-mono text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-red-600 transition-all shadow-[0_0_20px_rgba(255,42,42,0.4)] flex items-center gap-2.5">
+              <span>Explore Projects</span>
+              <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+            <a href="resume.html" target="_blank" class="px-6 py-3.5 border border-white/20 bg-black/40 backdrop-blur-md text-white font-mono text-xs font-semibold uppercase tracking-wider rounded-xl hover:border-brandRed hover:text-brandRed transition-all flex items-center gap-2.5">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>Download Resume</span>
+            </a>
+            <a href="#contact" class="px-5 py-3.5 text-gray-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-colors flex items-center gap-2">
+              <span>Contact Me</span>
+              <i data-lucide="chevron-right" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- Social Links Bar -->
+          <div class="pt-4 flex items-center gap-3">
+            <span class="text-xs font-mono text-gray-500 uppercase tracking-widest">Connect:</span>
+            <a href="https://linkedin.com/in/maddulaajay-rathna-287b451b1" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg border border-white/10 bg-black/60 flex items-center justify-center text-gray-400 hover:text-brandRed hover:border-brandRed transition-all" title="LinkedIn">
+              <i data-lucide="linkedin" class="w-4 h-4"></i>
+            </a>
+            <a href="https://github.com/Ajay7919/Ajay-Rathna-M" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-lg border border-white/10 bg-black/60 flex items-center justify-center text-gray-400 hover:text-brandRed hover:border-brandRed transition-all" title="GitHub">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+            <a href="mailto:maddulaajayrathna@gmail.com" class="w-9 h-9 rounded-lg border border-white/10 bg-black/60 flex items-center justify-center text-gray-400 hover:text-brandRed hover:border-brandRed transition-all" title="Email Ajay">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+            </a>
+            <a href="tel:+919642177022" class="w-9 h-9 rounded-lg border border-white/10 bg-black/60 flex items-center justify-center text-gray-400 hover:text-brandRed hover:border-brandRed transition-all" title="Call Ajay">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Graphic: SQL Data Terminal -->
+        <div class="lg:col-span-5">
+          <div class="card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-5 shadow-2xl space-y-4">
+            <!-- Terminal Header -->
+            <div class="flex items-center justify-between pb-3 border-b border-white/10">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
+                <span class="text-xs font-mono text-gray-400 ml-2">ajay_analytics_engine.sql</span>
+              </div>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-brandRed/20 text-brandRed border border-brandRed/30 uppercase">LIVE QUERY</span>
+            </div>
+
+            <!-- Query Body -->
+            <div class="font-mono text-xs leading-relaxed text-gray-300 space-y-1">
+              <div><span class="text-brandRed font-bold">WITH</span> revenue_forecast <span class="text-brandRed font-bold">AS</span> (</div>
+              <div class="pl-4"><span class="text-blue-400 font-bold">SELECT</span></div>
+              <div class="pl-8">project_name,</div>
+              <div class="pl-8"><span class="text-yellow-400">AVG</span>(forecast_accuracy) <span class="text-blue-400 font-bold">AS</span> model_precision,</div>
+              <div class="pl-8"><span class="text-yellow-400">SUM</span>(time_saved_hours) <span class="text-blue-400 font-bold">AS</span> automation_gain</div>
+              <div class="pl-4"><span class="text-blue-400 font-bold">FROM</span> analytics_pipelines</div>
+              <div class="pl-4"><span class="text-blue-400 font-bold">WHERE</span> analyst = <span class="text-green-400">'Maddula Ajay Rathna'</span></div>
+              <div class="pl-4"><span class="text-blue-400 font-bold">GROUP BY</span> project_name</div>
+              <div>)</div>
+              <div><span class="text-blue-400 font-bold">SELECT</span> * <span class="text-blue-400 font-bold">FROM</span> revenue_forecast;</div>
+            </div>
+
+            <!-- Live Execution Result Pill -->
+            <div class="p-3.5 rounded-xl bg-black/60 border border-white/5 space-y-2">
+              <div class="flex items-center justify-between text-[11px] font-mono text-gray-400">
+                <span>QUERY EXECUTION TIME: <strong class="text-green-400">14ms</strong></span>
+                <span>STATUS: <strong class="text-green-400">SUCCESS (100%)</strong></span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 pt-1 font-mono text-xs">
+                <div class="p-2 rounded bg-white/5 border border-white/5">
+                  <span class="text-[10px] text-gray-400 block">PRIMARY TOOLS</span>
+                  <span class="text-white font-bold">Python • SQL • Tableau</span>
+                </div>
+                <div class="p-2 rounded bg-white/5 border border-white/5">
+                  <span class="text-[10px] text-gray-400 block">EDUCATION</span>
+                  <span class="text-white font-bold">B.Tech CSE (7.9 CGPA)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KPI Stat Counters -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 pt-8 border-t border-white/10">
+        <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 text-center">
+          <span class="text-3xl sm:text-4xl font-display font-bold text-brandRed">3+</span>
+          <p class="text-xs font-mono uppercase text-gray-400 tracking-wider mt-1">End-to-End Projects</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 text-center">
+          <span class="text-3xl sm:text-4xl font-display font-bold text-white">1+</span>
+          <p class="text-xs font-mono uppercase text-gray-400 tracking-wider mt-1">Yr Internship (SkillForge)</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 text-center">
+          <span class="text-3xl sm:text-4xl font-display font-bold text-brandRed">7.9</span>
+          <p class="text-xs font-mono uppercase text-gray-400 tracking-wider mt-1">CGPA / 10 (SRM IST)</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white/[0.02] border border-white/5 text-center">
+          <span class="text-3xl sm:text-4xl font-display font-bold text-white">15+</span>
+          <p class="text-xs font-mono uppercase text-gray-400 tracking-wider mt-1">Tools & Libraries</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="relative py-28 bg-[#070707] border-t border-white/5 overflow-hidden">
+    <!-- Watermark Background -->
+    <div class="watermark-text top-10 right-0 text-[18vw] sm:text-[14vw] lg:text-[12vw]">
+      ABOUT
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="space-y-2 mb-16">
+        <div class="inline-block border border-white/20 bg-black/40 px-3 py-1 text-[10px] tracking-widest font-mono text-gray-300 uppercase">
+          ABOUT ME
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase tracking-tight text-white">
+          BRIDGING RAW DATA WITH <span class="text-brandRed">STRATEGIC DECISIONS</span>
+        </h2>
+        <div class="w-16 h-1 bg-brandRed rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- Left Column: Story -->
+        <div class="lg:col-span-6 space-y-6 text-gray-300 text-sm sm:text-base leading-relaxed">
+          <p>
+            I am a <strong class="text-white">Detail-oriented Data Analyst</strong> with hands-on experience gathering, cleansing, and analyzing multi-source datasets to produce actionable business insights.
+          </p>
+          <p>
+            Skilled in <span class="text-brandRed font-mono font-semibold">Python, SQL, MySQL, and Excel</span>, with a strong foundation in statistics, data visualization, and dashboard development. I thrive in identifying underlying trends and patterns in complex data, coordinating cross-functionally with technical and non-technical stakeholders to align on business priorities.
+          </p>
+          <p>
+            I have a proven track record of improving reporting efficiency and forecast accuracy through process automation and predictive modeling, as demonstrated during my Data Analyst Internship at <strong class="text-white">SkillForge</strong>.
+          </p>
+
+          <!-- Highlight Checklist -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 font-mono text-xs">
+            <div class="flex items-center gap-2 p-3 rounded-lg bg-black/40 border border-white/5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brandRed"></i>
+              <span>Data Profiling & EDA</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-lg bg-black/40 border border-white/5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brandRed"></i>
+              <span>Scalable SQL Transformations</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-lg bg-black/40 border border-white/5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brandRed"></i>
+              <span>Interactive Tableau Dashboards</span>
+            </div>
+            <div class="flex items-center gap-2 p-3 rounded-lg bg-black/40 border border-white/5">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-brandRed"></i>
+              <span>Predictive & Ensemble ML</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: 4 Core Competency Pillars -->
+        <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Pillar 1 -->
+          <div class="card-glow p-6 rounded-2xl bg-[#0d0d0d] border border-white/10 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-brandRed/10 border border-brandRed/30 flex items-center justify-center text-brandRed">
+              <i data-lucide="filter" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold font-display uppercase tracking-wide text-white">Data Cleansing & EDA</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Handling missing data, resolving schema anomalies, detecting outliers, and normalizing distributions for dependable modeling.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="card-glow p-6 rounded-2xl bg-[#0d0d0d] border border-white/10 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-brandRed/10 border border-brandRed/30 flex items-center justify-center text-brandRed">
+              <i data-lucide="database" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold font-display uppercase tracking-wide text-white">SQL & Relational DBs</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Complex joins, window functions, CTEs, and aggregated querying across MySQL and relational data warehouses.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="card-glow p-6 rounded-2xl bg-[#0d0d0d] border border-white/10 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-brandRed/10 border border-brandRed/30 flex items-center justify-center text-brandRed">
+              <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold font-display uppercase tracking-wide text-white">Tableau & BI Dashboards</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Building intuitive, stakeholder-facing interactive dashboards that turn raw multi-table feeds into instant decisions.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="card-glow p-6 rounded-2xl bg-[#0d0d0d] border border-white/10 space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-brandRed/10 border border-brandRed/30 flex items-center justify-center text-brandRed">
+              <i data-lucide="trending-up" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold font-display uppercase tracking-wide text-white">Predictive Modeling</h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Applying Scikit-learn ensemble learning, NLP classification, and statistical regression to forecast outcomes accurately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TECHNICAL SKILLS SECTION ==================== -->
+  <section id="skills" class="relative py-28 bg-[#050505] border-t border-white/5 overflow-hidden">
+    <!-- Watermark Background -->
+    <div class="watermark-text top-10 left-0 text-[18vw] sm:text-[14vw] lg:text-[12vw]">
+      SKILLS
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="space-y-2 mb-12 text-center">
+        <div class="inline-block border border-white/20 bg-black/40 px-3 py-1 text-[10px] tracking-widest font-mono text-gray-300 uppercase">
+          TECHNICAL ARSENAL
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase tracking-tight text-white">
+          SKILLS & <span class="text-brandRed">TECHNOLOGIES</span>
+        </h2>
+        <div class="w-16 h-1 bg-brandRed rounded-full mx-auto mt-2"></div>
+      </div>
+
+      <!-- Skills Category Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Category 1: Languages & Query Tools -->
+        <div class="card-glow p-6 rounded-2xl bg-[#0d0d0d] border border-white/10 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-brandRed uppercase tracking-wider font-semibold">01 / DATABASE & CODE</span>
+              <i data-lucide="code-2" class="w-5 h-5 text-gray-400"></i>
+            </div>
+            <h3 class="text-lg font-bold font-display uppercase text-white">Languages & Query Tools</h3>
+            <div class="space-y-3 pt-2">
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Python</span>
+                  <span class="text-brandRed">90%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>SQL / MySQL</span>
+                  <span class="text-brandRed">92%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 92%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Data Querying & ETL</span>
+                  <span class="text-brandRed">88%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-6 mt-4 border-t border-white/5">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Python</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">SQL</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">MySQL</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">ETL</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Data Analysis & Viz -->
+        <div class="card-glow p-6 rounded-2xl bg-[#0d0d0d] border border-white/10 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-brandRed uppercase tracking-wider font-semibold">02 / VISUALIZATION</span>
+              <i data-lucide="bar-chart-3" class="w-5 h-5 text-gray-400"></i>
+            </div>
+            <h3 class="text-lg font-bold font-display uppercase text-white">Data Analysis & Viz</h3>
+            <div class="space-y-3 pt-2">
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Microsoft Excel</span>
+                  <span class="text-brandRed">95%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Pandas & NumPy</span>
+                  <span class="text-brandRed">90%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Matplotlib & Seaborn</span>
+                  <span class="text-brandRed">88%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-6 mt-4 border-t border-white/5">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Excel</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Pivot Tables</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Pandas</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Seaborn</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Machine Learning & BI Tools -->
+        <div class="card-glow p-6 rounded-2xl bg-[#0d0d0d] border border-white/10 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-brandRed uppercase tracking-wider font-semibold">03 / INTELLIGENCE</span>
+              <i data-lucide="cpu" class="w-5 h-5 text-gray-400"></i>
+            </div>
+            <h3 class="text-lg font-bold font-display uppercase text-white">ML & BI Dashboards</h3>
+            <div class="space-y-3 pt-2">
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Tableau Dashboards</span>
+                  <span class="text-brandRed">88%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 88%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Scikit-learn / ML</span>
+                  <span class="text-brandRed">84%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 84%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Jupyter & GitHub</span>
+                  <span class="text-brandRed">90%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 90%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-6 mt-4 border-t border-white/5">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Tableau</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Scikit-learn</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Jupyter</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">GitHub</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Core Competencies -->
+        <div class="card-glow p-6 rounded-2xl bg-[#0d0d0d] border border-white/10 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-mono text-brandRed uppercase tracking-wider font-semibold">04 / STRATEGY</span>
+              <i data-lucide="crosshair" class="w-5 h-5 text-gray-400"></i>
+            </div>
+            <h3 class="text-lg font-bold font-display uppercase text-white">Core Competencies</h3>
+            <div class="space-y-3 pt-2">
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Data Cleansing & Wrangling</span>
+                  <span class="text-brandRed">95%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 95%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Trend & Pattern Analysis</span>
+                  <span class="text-brandRed">90%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 90%;"></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between text-xs font-mono mb-1">
+                  <span>Process Automation</span>
+                  <span class="text-brandRed">86%</span>
+                </div>
+                <div class="h-1.5 w-full bg-white/10 rounded-full overflow-hidden">
+                  <div class="h-full bg-brandRed rounded-full" style="width: 86%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1.5 pt-6 mt-4 border-t border-white/5">
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Wrangling</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Insights</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Automation</span>
+            <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-white/5 text-gray-300">Statistics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXPERIENCE SECTION ==================== -->
+  <section id="experience" class="relative py-28 bg-[#070707] border-t border-white/5 overflow-hidden">
+    <!-- Watermark Background -->
+    <div class="watermark-text top-10 right-0 text-[16vw] sm:text-[12vw] lg:text-[10vw]">
+      EXPERIENCE
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="space-y-2 mb-16">
+        <div class="inline-block border border-white/20 bg-black/40 px-3 py-1 text-[10px] tracking-widest font-mono text-gray-300 uppercase">
+          CAREER TIMELINE
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase tracking-tight text-white">
+          PROFESSIONAL <span class="text-brandRed">EXPERIENCE</span>
+        </h2>
+        <div class="w-16 h-1 bg-brandRed rounded-full mt-2"></div>
+      </div>
+
+      <!-- Experience Highlight Card (SkillForge) -->
+      <div class="card-glow rounded-3xl bg-[#0c0c0c] border border-white/10 p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+        <!-- Top Metadata Bar -->
+        <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10">
+          <div class="space-y-1">
+            <div class="flex items-center gap-3">
+              <h3 class="text-2xl sm:text-3xl font-display font-bold uppercase text-white">Data Analyst Intern</h3>
+              <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase bg-brandRed/20 text-brandRed border border-brandRed/30">Completed</span>
+            </div>
+            <p class="text-base font-mono text-brandRed font-semibold flex items-center gap-2">
+              <span>SkillForge</span>
+              <span class="text-gray-500">•</span>
+              <span class="text-gray-400 font-normal text-sm">Bangalore, India</span>
+            </p>
+          </div>
+          <div class="text-right font-mono">
+            <span class="text-xs text-gray-400 block">TENURE</span>
+            <span class="text-sm font-bold text-white bg-white/5 px-3 py-1 rounded-lg border border-white/10">2024 – 2025</span>
+          </div>
+        </div>
+
+        <!-- Role Core Highlights Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <!-- Bullet 1 -->
+          <div class="p-5 rounded-2xl bg-black/40 border border-white/5 space-y-2">
+            <div class="flex items-center gap-2 text-brandRed text-sm font-mono font-bold">
+              <i data-lucide="search" class="w-4 h-4"></i>
+              <span>Data Profiling & EDA</span>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              Performed comprehensive data profiling and exploratory data analysis (EDA) on business datasets to uncover latent trends, anomalies, and operational improvement opportunities.
+            </p>
+          </div>
+
+          <!-- Bullet 2 -->
+          <div class="p-5 rounded-2xl bg-black/40 border border-white/5 space-y-2">
+            <div class="flex items-center gap-2 text-brandRed text-sm font-mono font-bold">
+              <i data-lucide="database" class="w-4 h-4"></i>
+              <span>Scalable SQL Transformations</span>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              Wrote scalable, high-performance SQL queries to extract, join, clean, and transform data from complex relational databases, accelerating stakeholder reporting and business intelligence needs.
+            </p>
+          </div>
+
+          <!-- Bullet 3 -->
+          <div class="p-5 rounded-2xl bg-black/40 border border-white/5 space-y-2">
+            <div class="flex items-center gap-2 text-brandRed text-sm font-mono font-bold">
+              <i data-lucide="pie-chart" class="w-4 h-4"></i>
+              <span>Tableau Business Dashboards</span>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              Architected interactive data visualization dashboards in Tableau that made complex analytical findings and KPI performance intuitively interpretable for non-technical leadership.
+            </p>
+          </div>
+
+          <!-- Bullet 4 -->
+          <div class="p-5 rounded-2xl bg-black/40 border border-white/5 space-y-2">
+            <div class="flex items-center gap-2 text-brandRed text-sm font-mono font-bold">
+              <i data-lucide="line-chart" class="w-4 h-4"></i>
+              <span>Python Statistical Inference</span>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-300 leading-relaxed">
+              Applied Python-based statistical analysis and data wrangling techniques (Pandas, NumPy, Scipy) to back strategic, data-driven business recommendations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tech Stack Tags -->
+        <div class="pt-6 mt-6 border-t border-white/10 flex flex-wrap items-center gap-2 font-mono text-xs text-gray-400">
+          <span class="text-gray-500 uppercase tracking-wider text-[10px]">Applied Stack:</span>
+          <span class="px-2.5 py-1 rounded bg-white/5 text-gray-200">Python</span>
+          <span class="px-2.5 py-1 rounded bg-white/5 text-gray-200">SQL / MySQL</span>
+          <span class="px-2.5 py-1 rounded bg-white/5 text-gray-200">Tableau</span>
+          <span class="px-2.5 py-1 rounded bg-white/5 text-gray-200">EDA</span>
+          <span class="px-2.5 py-1 rounded bg-white/5 text-gray-200">Statistical Analysis</span>
+          <span class="px-2.5 py-1 rounded bg-white/5 text-gray-200">Pandas</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED PROJECTS SECTION ==================== -->
+  <section id="projects" class="relative py-28 bg-[#050505] border-t border-white/5 overflow-hidden">
+    <!-- Watermark Background -->
+    <div class="watermark-text top-10 left-0 text-[16vw] sm:text-[12vw] lg:text-[10vw]">
+      PROJECTS
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="space-y-2">
+          <div class="inline-block border border-white/20 bg-black/40 px-3 py-1 text-[10px] tracking-widest font-mono text-gray-300 uppercase">
+            PORTFOLIO SHOWCASE
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase tracking-tight text-white">
+            FEATURED <span class="text-brandRed">ANALYTICS PROJECTS</span>
+          </h2>
+          <div class="w-16 h-1 bg-brandRed rounded-full mt-2"></div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap gap-2 font-mono text-xs">
+          <button class="project-filter-btn px-3.5 py-1.5 rounded-lg bg-brandRed text-white transition-all font-semibold" data-filter="all">All</button>
+          <button class="project-filter-btn px-3.5 py-1.5 rounded-lg bg-white/5 text-gray-400 hover:text-white transition-all font-semibold" data-filter="ml">Predictive ML</button>
+          <button class="project-filter-btn px-3.5 py-1.5 rounded-lg bg-white/5 text-gray-400 hover:text-white transition-all font-semibold" data-filter="nlp">NLP & Sentiment</button>
+          <button class="project-filter-btn px-3.5 py-1.5 rounded-lg bg-white/5 text-gray-400 hover:text-white transition-all font-semibold" data-filter="bi">BI & Dashboards</button>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1: Box Office -->
+        <div class="project-card card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-6 flex flex-col justify-between" data-category="ml">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-brandRed font-bold bg-brandRed/10 border border-brandRed/20 px-2 py-0.5 rounded">
+                MACHINE LEARNING / ML
+              </span>
+              <span class="text-xs font-mono text-gray-500">2024</span>
+            </div>
+
+            <h3 class="text-xl font-display font-bold uppercase text-white leading-tight">
+              Movie Box Office Revenue Analysis & Forecasting
+            </h3>
+
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+              Collected, cleaned, and preprocessed multi-source movie datasets, conducted exploratory data analysis to surface key revenue drivers, and engineered ensemble learning models for forecasting decisions.
+            </p>
+
+            <div class="space-y-1.5 pt-2 font-mono text-xs">
+              <div class="flex items-center gap-2 text-gray-300">
+                <span class="text-brandRed">▹</span>
+                <span>Multi-source data ingestion & cleansing</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-300">
+                <span class="text-brandRed">▹</span>
+                <span>Ensemble model forecasting & feature importance</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-300">
+                <span class="text-brandRed">▹</span>
+                <span>Communicated insights via visualizations</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-white/10 space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">Python</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">Scikit-learn</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">Pandas</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">Ensemble</span>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <button data-project-key="boxoffice" class="text-xs font-mono uppercase text-brandRed hover:text-red-400 font-bold flex items-center gap-1.5">
+                <span>View Deep Dive</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+              <a href="#simulator" class="text-xs font-mono text-gray-400 hover:text-white flex items-center gap-1">
+                <i data-lucide="play" class="w-3 h-3 text-brandRed"></i>
+                <span>Live Sim</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Sentiment Analysis -->
+        <div class="project-card card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-6 flex flex-col justify-between" data-category="nlp">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-brandRed font-bold bg-brandRed/10 border border-brandRed/20 px-2 py-0.5 rounded">
+                NLP / TEXT ANALYTICS
+              </span>
+              <span class="text-xs font-mono text-gray-500">2024</span>
+            </div>
+
+            <h3 class="text-xl font-display font-bold uppercase text-white leading-tight">
+              Content Moderation & Sentiment Analysis System
+            </h3>
+
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+              Analyzed large-scale textual datasets using NLP techniques to classify user content and gauge sentiment valence, generating analytical reports summarizing findings for content moderation decisions.
+            </p>
+
+            <div class="space-y-1.5 pt-2 font-mono text-xs">
+              <div class="flex items-center gap-2 text-gray-300">
+                <span class="text-brandRed">▹</span>
+                <span>NLP classification & sentiment gauging</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-300">
+                <span class="text-brandRed">▹</span>
+                <span>Large-scale textual dataset parsing</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-300">
+                <span class="text-brandRed">▹</span>
+                <span>Actionable moderation decision reports</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-white/10 space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">NLP</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">Python</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">Text Mining</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">Classification</span>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <button data-project-key="sentiment" class="text-xs font-mono uppercase text-brandRed hover:text-red-400 font-bold flex items-center gap-1.5">
+                <span>View Deep Dive</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Social Media Analysis -->
+        <div class="project-card card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-6 flex flex-col justify-between" data-category="bi">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono uppercase tracking-wider text-brandRed font-bold bg-brandRed/10 border border-brandRed/20 px-2 py-0.5 rounded">
+                BUSINESS INTELLIGENCE / EDA
+              </span>
+              <span class="text-xs font-mono text-gray-500">2024</span>
+            </div>
+
+            <h3 class="text-xl font-display font-bold uppercase text-white leading-tight">
+              Social Media Content Analysis & Engagement
+            </h3>
+
+            <p class="text-xs sm:text-sm text-gray-400 leading-relaxed">
+              Analyzed multi-channel social media datasets to identify engagement patterns and trends across content types, building reports and interactive dashboards to translate raw data into team strategy.
+            </p>
+
+            <div class="space-y-1.5 pt-2 font-mono text-xs">
+              <div class="flex items-center gap-2 text-gray-300">
+                <span class="text-brandRed">▹</span>
+                <span>Engagement pattern & trend discovery</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-300">
+                <span class="text-brandRed">▹</span>
+                <span>Interactive dashboards for content strategy</span>
+              </div>
+              <div class="flex items-center gap-2 text-gray-300">
+                <span class="text-brandRed">▹</span>
+                <span>Cross-format engagement comparative analysis</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-white/10 space-y-4">
+            <div class="flex flex-wrap gap-1.5 font-mono text-[11px]">
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">Tableau</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">SQL</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">Pandas</span>
+              <span class="px-2 py-0.5 rounded bg-white/5 text-gray-300">EDA</span>
+            </div>
+            <div class="flex items-center justify-between pt-1">
+              <button data-project-key="socialmedia" class="text-xs font-mono uppercase text-brandRed hover:text-red-400 font-bold flex items-center gap-1.5">
+                <span>View Deep Dive</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INTERACTIVE ANALYTICS SIMULATOR ==================== -->
+  <section id="simulator" class="relative py-28 bg-[#070707] border-t border-white/5 overflow-hidden">
+    <!-- Watermark Background -->
+    <div class="watermark-text top-10 right-0 text-[16vw] sm:text-[12vw] lg:text-[10vw]">
+      ANALYTICS
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Section Header -->
+      <div class="space-y-2 mb-12 text-center">
+        <div class="inline-block border border-white/20 bg-black/40 px-3 py-1 text-[10px] tracking-widest font-mono text-gray-300 uppercase">
+          LIVE DEMO • REAL-TIME MODEL INTERACTION
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase tracking-tight text-white">
+          BOX OFFICE REVENUE <span class="text-brandRed">PREDICTOR & SIMULATOR</span>
+        </h2>
+        <p class="text-sm font-mono text-gray-400 max-w-xl mx-auto">
+          Adjust production parameters in real time to test the dynamic ensemble forecasting model engineered by Ajay.
+        </p>
+        <div class="w-16 h-1 bg-brandRed rounded-full mx-auto mt-2"></div>
+      </div>
+
+      <!-- Simulator Interactive Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        <!-- Controls Column -->
+        <div class="lg:col-span-5 card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-6 space-y-6">
+          <h3 class="text-base font-bold font-display uppercase tracking-wider text-white border-b border-white/10 pb-3 flex items-center justify-between">
+            <span>Model Hyperparameters</span>
+            <span class="text-xs font-mono text-brandRed">Interactive</span>
+          </h3>
+
+          <!-- Slider 1: Production Budget -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-gray-300">Production Budget</span>
+              <span id="val-budget" class="text-brandRed font-bold">$65M</span>
+            </div>
+            <input type="range" id="sim-budget" min="10" max="250" value="65" step="5">
+            <div class="flex justify-between text-[10px] font-mono text-gray-500">
+              <span>$10M (Indie)</span>
+              <span>$250M (Mega Blockbuster)</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Marketing & Distribution -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-gray-300">Marketing & Promo Budget</span>
+              <span id="val-marketing" class="text-brandRed font-bold">$30M</span>
+            </div>
+            <input type="range" id="sim-marketing" min="5" max="150" value="30" step="5">
+            <div class="flex justify-between text-[10px] font-mono text-gray-500">
+              <span>$5M</span>
+              <span>$150M</span>
+            </div>
+          </div>
+
+          <!-- Slider 3: Cast Star Power Rating -->
+          <div class="space-y-2">
+            <div class="flex justify-between text-xs font-mono">
+              <span class="text-gray-300">Cast & Director Star Power</span>
+              <span id="val-star" class="text-brandRed font-bold">3.5 ★</span>
+            </div>
+            <input type="range" id="sim-star" min="1" max="5" value="3.5" step="0.5">
+            <div class="flex justify-between text-[10px] font-mono text-gray-500">
+              <span>1 ★ (Fresh Faces)</span>
+              <span>5 ★ (A-List Ensemble)</span>
+            </div>
+          </div>
+
+          <!-- Dropdowns: Genre & Season -->
+          <div class="grid grid-cols-2 gap-4">
+            <div class="space-y-1.5">
+              <label class="text-xs font-mono text-gray-300 block">Film Genre</label>
+              <select id="sim-genre" class="w-full bg-black border border-white/15 rounded-lg p-2.5 text-xs font-mono text-white outline-none focus:border-brandRed">
+                <option value="1.35">Action / Sci-Fi</option>
+                <option value="1.25">Animation / Family</option>
+                <option value="1.15">Comedy</option>
+                <option value="1.10">Thriller / Horror</option>
+                <option value="0.95">Drama</option>
+              </select>
+            </div>
+
+            <div class="space-y-1.5">
+              <label class="text-xs font-mono text-gray-300 block">Release Window</label>
+              <select id="sim-season" class="w-full bg-black border border-white/15 rounded-lg p-2.5 text-xs font-mono text-white outline-none focus:border-brandRed">
+                <option value="1.30">Holiday / Christmas</option>
+                <option value="1.25">Summer Peak</option>
+                <option value="1.05">Spring Break</option>
+                <option value="0.90">Fall / Off-Peak</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Output & Chart Column -->
+        <div class="lg:col-span-7 card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/10">
+              <div>
+                <span class="text-[10px] font-mono uppercase tracking-wider text-brandRed font-semibold">DYNAMIC PREDICTIVE METRICS</span>
+                <h4 class="text-xl font-display font-bold uppercase text-white">Financial Forecast Breakdown</h4>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span class="text-xs font-mono text-gray-400">Live Compute</span>
+              </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="grid grid-cols-3 gap-3 my-5">
+              <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-center">
+                <span class="text-[10px] font-mono text-gray-400 block uppercase">Projected Gross</span>
+                <span id="calc-revenue" class="text-2xl sm:text-3xl font-bold font-display text-white">$210M</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-center">
+                <span class="text-[10px] font-mono text-gray-400 block uppercase">Estimated ROI</span>
+                <span id="calc-roi" class="text-2xl sm:text-3xl font-bold font-mono text-green-400">+121%</span>
+              </div>
+              <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-center">
+                <span class="text-[10px] font-mono text-gray-400 block uppercase">Risk Profile</span>
+                <span id="calc-risk" class="text-xs sm:text-sm font-semibold font-mono text-green-400 block mt-2">Low Risk</span>
+              </div>
+            </div>
+
+            <!-- Chart Container -->
+            <div class="h-64 sm:h-72 w-full pt-2">
+              <canvas id="simulator-chart"></canvas>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/10 flex items-center justify-between text-xs font-mono text-gray-500">
+            <span>Formula: Ensemble Non-linear Regression + Multi-factor Multipliers</span>
+            <span class="text-brandRed">Engineered in Python</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION & CERTIFICATES ==================== -->
+  <section id="education" class="relative py-28 bg-[#050505] border-t border-white/5 overflow-hidden">
+    <!-- Watermark Background -->
+    <div class="watermark-text top-10 left-0 text-[16vw] sm:text-[12vw] lg:text-[10vw]">
+      EDUCATION
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="space-y-2 mb-16">
+        <div class="inline-block border border-white/20 bg-black/40 px-3 py-1 text-[10px] tracking-widest font-mono text-gray-300 uppercase">
+          ACADEMICS & CREDENTIALS
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase tracking-tight text-white">
+          EDUCATION & <span class="text-brandRed">CERTIFICATIONS</span>
+        </h2>
+        <div class="w-16 h-1 bg-brandRed rounded-full mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Education Card -->
+        <div class="lg:col-span-7 card-glow rounded-3xl bg-[#0c0c0c] border border-white/10 p-6 sm:p-8 space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/10">
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <i data-lucide="graduation-cap" class="w-6 h-6 text-brandRed"></i>
+                <h3 class="text-xl sm:text-2xl font-display font-bold uppercase text-white">SRM Institute of Science and Technology</h3>
+              </div>
+              <p class="text-xs font-mono text-gray-400">Ramapuram Campus, Chennai</p>
+            </div>
+            <div class="text-right">
+              <span class="text-xs font-mono text-gray-400 block">2022 – 2026</span>
+              <span class="text-xs font-mono font-bold text-green-400 bg-green-500/10 border border-green-500/20 px-2.5 py-1 rounded">CGPA: 7.9 / 10</span>
+            </div>
+          </div>
+
+          <div class="space-y-2">
+            <h4 class="text-sm font-display font-bold uppercase text-white tracking-wide">
+              Bachelor of Technology (B.Tech) – Computer Science and Engineering
+            </h4>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Comprehensive undergraduate curriculum combining core computer science foundations with specialized focus on data science, database architectures, and algorithm optimization.
+            </p>
+          </div>
+
+          <!-- Coursework Badges -->
+          <div class="space-y-2 pt-2">
+            <span class="text-xs font-mono text-brandRed font-semibold uppercase tracking-wider block">Relevant Coursework:</span>
+            <div class="flex flex-wrap gap-2 font-mono text-xs">
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/5 text-gray-300">Data Science</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/5 text-gray-300">Database Management Systems</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/5 text-gray-300">Machine Learning</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/5 text-gray-300">Artificial Intelligence</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/5 text-gray-300">Data Structures & Algorithms</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/5 text-gray-300">Software Engineering</span>
+              <span class="px-2.5 py-1 rounded-lg bg-white/5 border border-white/5 text-gray-300">NLP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications List -->
+        <div class="lg:col-span-5 space-y-4">
+          <h3 class="text-base font-bold font-display uppercase tracking-wider text-white flex items-center gap-2">
+            <i data-lucide="award" class="w-5 h-5 text-brandRed"></i>
+            <span>Verified Certifications</span>
+          </h3>
+
+          <!-- Cert 1 -->
+          <div class="card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono text-brandRed uppercase tracking-wider font-semibold">DATABASE & SCRIPTING</span>
+              <span class="text-xs text-green-400 font-mono flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5"></i> Verified</span>
+            </div>
+            <h4 class="text-sm sm:text-base font-bold text-white font-display uppercase">Python Programming & MySQL</h4>
+            <p class="text-xs text-gray-400">Advanced query optimization, relational schema design, automation scripting, and database integration.</p>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono text-brandRed uppercase tracking-wider font-semibold">ANALYTICS & MODELING</span>
+              <span class="text-xs text-green-400 font-mono flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5"></i> Verified</span>
+            </div>
+            <h4 class="text-sm sm:text-base font-bold text-white font-display uppercase">Data Science with Python</h4>
+            <p class="text-xs text-gray-400">Statistical data wrangling, Pandas, NumPy, Matplotlib exploratory analysis, and supervised machine learning pipelines.</p>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-5 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-mono text-brandRed uppercase tracking-wider font-semibold">ARTIFICIAL INTELLIGENCE</span>
+              <span class="text-xs text-green-400 font-mono flex items-center gap-1"><i data-lucide="check" class="w-3.5 h-3.5"></i> Verified</span>
+            </div>
+            <h4 class="text-sm sm:text-base font-bold text-white font-display uppercase">Generative AI — ChatGPT</h4>
+            <p class="text-xs text-gray-400">Prompt engineering, large language model workflow orchestration, and generative AI productivity systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="relative py-28 bg-[#070707] border-t border-white/5 overflow-hidden">
+    <!-- Watermark Background -->
+    <div class="watermark-text top-10 right-0 text-[18vw] sm:text-[14vw] lg:text-[12vw]">
+      CONTACT
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="space-y-2 mb-16 text-center">
+        <div class="inline-block border border-white/20 bg-black/40 px-3 py-1 text-[10px] tracking-widest font-mono text-gray-300 uppercase">
+          INITIATE CONTACT
+        </div>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold uppercase tracking-tight text-white">
+          LET'S DISCUSS YOUR <span class="text-brandRed">DATA NEEDS</span>
+        </h2>
+        <p class="text-sm font-mono text-gray-400 max-w-lg mx-auto">
+          Currently open to full-time Data Analyst, Business Intelligence, or Analytics Associate opportunities.
+        </p>
+        <div class="w-16 h-1 bg-brandRed rounded-full mx-auto mt-2"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <!-- Direct Contact Cards -->
+        <div class="lg:col-span-5 space-y-4">
+          <!-- Email Card -->
+          <div class="card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-xl bg-brandRed/10 border border-brandRed/30 flex items-center justify-center text-brandRed">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-mono text-gray-400 uppercase tracking-widest block">Direct Email</span>
+                <a href="mailto:maddulaajayrathna@gmail.com" class="text-sm font-mono font-bold text-white hover:text-brandRed transition-colors">
+                  maddulaajayrathna@gmail.com
+                </a>
+              </div>
+            </div>
+            <button data-copy="maddulaajayrathna@gmail.com" class="p-2 text-gray-400 hover:text-white transition-colors" title="Copy Email">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-xl bg-brandRed/10 border border-brandRed/30 flex items-center justify-center text-brandRed">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-mono text-gray-400 uppercase tracking-widest block">Phone Number</span>
+                <a href="tel:+919642177022" class="text-sm font-mono font-bold text-white hover:text-brandRed transition-colors">
+                  +91-9642177022
+                </a>
+              </div>
+            </div>
+            <button data-copy="+919642177022" class="p-2 text-gray-400 hover:text-white transition-colors" title="Copy Phone">
+              <i data-lucide="copy" class="w-4 h-4"></i>
+            </button>
+          </div>
+
+          <!-- LinkedIn Card -->
+          <div class="card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-xl bg-brandRed/10 border border-brandRed/30 flex items-center justify-center text-brandRed">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-mono text-gray-400 uppercase tracking-widest block">LinkedIn Profile</span>
+                <a href="https://linkedin.com/in/maddulaajay-rathna-287b451b1" target="_blank" rel="noopener noreferrer" class="text-sm font-mono font-bold text-white hover:text-brandRed transition-colors">
+                  maddulaajay-rathna-287b451b1
+                </a>
+              </div>
+            </div>
+            <a href="https://linkedin.com/in/maddulaajay-rathna-287b451b1" target="_blank" rel="noopener noreferrer" class="p-2 text-gray-400 hover:text-white transition-colors">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <!-- GitHub Card -->
+          <div class="card-glow rounded-2xl bg-[#0c0c0c] border border-white/10 p-5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+              <div class="w-11 h-11 rounded-xl bg-brandRed/10 border border-brandRed/30 flex items-center justify-center text-brandRed">
+                <i data-lucide="github" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <span class="text-[10px] font-mono text-gray-400 uppercase tracking-widest block">GitHub Repository</span>
+                <a href="https://github.com/Ajay7919/Ajay-Rathna-M" target="_blank" rel="noopener noreferrer" class="text-sm font-mono font-bold text-white hover:text-brandRed transition-colors">
+                  Ajay7919 / Ajay-Rathna-M
+                </a>
+              </div>
+            </div>
+            <a href="https://github.com/Ajay7919/Ajay-Rathna-M" target="_blank" rel="noopener noreferrer" class="p-2 text-gray-400 hover:text-white transition-colors">
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="lg:col-span-7 card-glow rounded-3xl bg-[#0c0c0c] border border-white/10 p-6 sm:p-8">
+          <h3 class="text-xl font-display font-bold uppercase text-white mb-6 flex items-center gap-2">
+            <i data-lucide="send" class="w-5 h-5 text-brandRed"></i>
+            <span>Send Direct Message</span>
+          </h3>
+
+          <form id="portfolio-contact-form" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="space-y-1">
+                <label class="text-xs font-mono text-gray-400">Your Name *</label>
+                <input type="text" id="contact-name" required placeholder="John Doe" class="w-full bg-black border border-white/15 rounded-xl p-3 text-xs font-mono text-white outline-none focus:border-brandRed transition-colors">
+              </div>
+              <div class="space-y-1">
+                <label class="text-xs font-mono text-gray-400">Your Email *</label>
+                <input type="email" id="contact-email" required placeholder="john@company.com" class="w-full bg-black border border-white/15 rounded-xl p-3 text-xs font-mono text-white outline-none focus:border-brandRed transition-colors">
+              </div>
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-xs font-mono text-gray-400">Subject / Role Opportunity</label>
+              <input type="text" id="contact-subject" placeholder="Data Analyst Opportunity / Project Discussion" class="w-full bg-black border border-white/15 rounded-xl p-3 text-xs font-mono text-white outline-none focus:border-brandRed transition-colors">
+            </div>
+
+            <div class="space-y-1">
+              <label class="text-xs font-mono text-gray-400">Message *</label>
+              <textarea id="contact-message" rows="4" required placeholder="Hi Ajay, we came across your portfolio and would like to connect regarding an opportunity..." class="w-full bg-black border border-white/15 rounded-xl p-3 text-xs font-mono text-white outline-none focus:border-brandRed transition-colors resize-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 bg-brandRed text-white font-mono text-xs font-bold uppercase tracking-wider rounded-xl hover:bg-red-600 transition-all shadow-[0_0_20px_rgba(255,42,42,0.4)] flex items-center justify-center gap-2">
+              <span>Send Message to Ajay</span>
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="py-12 bg-[#030303] border-t border-white/5 text-center text-xs font-mono text-gray-500">
+    <div class="max-w-7xl mx-auto px-4 space-y-4">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="font-display font-bold text-white text-base">AJAY RATHNA</span>
+          <span>• Data Analyst</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#home" class="hover:text-white transition-colors">Home</a>
+          <a href="#about" class="hover:text-white transition-colors">About</a>
+          <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+          <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+          <a href="resume.html" target="_blank" class="hover:text-brandRed transition-colors">Resume</a>
+        </div>
+      </div>
+      <div class="pt-4 border-t border-white/5 text-[11px] text-gray-600 flex flex-wrap items-center justify-between">
+        <span>© 2026 Maddula Ajay Rathna. All rights reserved.</span>
+        <span>Crafted with modern data analytics aesthetic.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== PROJECT DEEP DIVE MODAL ==================== -->
+  <div id="project-modal" class="modal-overlay hidden">
+    <div class="modal-content p-6 sm:p-8">
+      <div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+        <span class="text-xs font-mono text-gray-400">PROJECT DEEP DIVE</span>
+        <button id="modal-close" class="text-gray-400 hover:text-white text-xl font-bold">&times;</button>
+      </div>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- ==================== AJAY AI PORTFOLIO CHATBOT (sreestats.in style) ==================== -->
+  <button id="chat-toggle" class="chat-toggle" onclick="window.toggleChatbot()" aria-label="Open Ajay's AI Assistant">
+    <span class="ping-circle"></span>
+    <span class="relative z-10 font-bold">AI</span>
+  </button>
+
+  <section id="chat-widget" class="chat-widget hidden" aria-label="Ajay Portfolio AI Assistant">
+    <header class="chat-header">
+      <div>
+        <strong>Ajay AI</strong>
+        <small>Portfolio Intelligence Assistant</small>
+      </div>
+      <button id="chat-close" onclick="window.closeChatbot()" aria-label="Close Assistant">&times;</button>
+    </header>
+
+    <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+
+    <div class="quick-actions" id="quick-actions">
+      <button type="button" onclick="window.sendQuickChat('Tell me about Ajay')" data-chat-question="Tell me about Ajay">About Ajay</button>
+      <button type="button" onclick="window.sendQuickChat('What are Ajay top technical skills?')" data-chat-question="What are Ajay's top technical skills?">Skills</button>
+      <button type="button" onclick="window.sendQuickChat('Tell me about the Movie Box Office project')" data-chat-question="Tell me about the Movie Box Office project">Box Office ML</button>
+      <button type="button" onclick="window.sendQuickChat('Tell me about his SkillForge internship')" data-chat-question="Tell me about his SkillForge internship">SkillForge Experience</button>
+      <button type="button" onclick="window.sendQuickChat('How can I contact Ajay?')" data-chat-question="How can I contact Ajay?">Contact</button>
+    </div>
+
+    <form id="chat-form" class="chat-form">
+      <input id="chat-input" maxlength="2000" placeholder="Ask about Ajay's skills, projects..." autocomplete="off" required>
+      <button type="submit" aria-label="Send Message">Send</button>
+    </form>
+  </section>
+
+  <!-- Notification Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    if (window.lucide && typeof lucide.createIcons === 'function') {
+      lucide.createIcons();
+    }
+  </script>
+
+  <!-- App Scripts -->
+  <script src="js/app.js"></script>
+  <script>
+// Maddula Ajay Rathna - Portfolio AI Assistant (Inspired by sreestats.in)
+
+(function() {
+  const KNOWLEDGE_BASE = {
+    about: {
+      answer: "I'm Maddula Ajay Rathna, a detail-oriented Data Analyst with hands-on experience in gathering, wrangling, and analyzing large datasets to produce actionable business insights. I specialize in Python, SQL, Tableau, and Excel, with a strong foundation in statistics, data visualization, and predictive modeling.",
+      sources: [{ title: "About Ajay", url: "#about" }]
+    },
+    skills: {
+      answer: "Ajay's core technical stack includes:\n• Languages & Databases: Python, SQL, MySQL, ETL & Data Extraction\n• Analysis & Visualization: Excel, Pandas, NumPy, Matplotlib, Seaborn, Tableau Dashboards\n• Machine Learning: Scikit-learn, Ensemble Methods, NLP, Jupyter, Git\n• Core Competencies: Data Cleansing, EDA, Trend Analysis, Business Intelligence",
+      sources: [{ title: "Technical Skills", url: "#skills" }]
+    },
+    experience: {
+      answer: "Ajay worked as a Data Analyst Intern at SkillForge (2024–2025 in Bangalore). During this time, he performed exploratory data analysis (EDA) to uncover trends and anomalies, wrote scalable SQL queries for relational databases, built interactive Tableau dashboards for non-technical stakeholders, and applied Python-based statistical analysis to drive business recommendations.",
+      sources: [{ title: "SkillForge Experience", url: "#experience" }]
+    },
+    projects: {
+      answer: "Ajay has built 3 key analytics and ML projects:\n1. Movie Box Office Revenue Analysis & Forecasting: Multi-source dataset collection, EDA for revenue drivers, and ensemble learning models.\n2. Content Moderation & Sentiment Analysis System: NLP-driven text classification and sentiment analytics.\n3. Social Media Content Analysis: Uncovered engagement patterns and built executive reporting dashboards.",
+      sources: [{ title: "View Projects", url: "#projects" }]
+    },
+    boxoffice: {
+      answer: "In the Movie Box Office Revenue Analysis & Forecasting project, Ajay collected, cleaned, and preprocessed multi-source movie data. He conducted deep EDA to discover key revenue drivers (budget, release season, marketing), engineered predictive features, and trained ensemble learning models to forecast box office earnings with high accuracy.",
+      sources: [{ title: "Movie Box Office Project", url: "#projects" }, { title: "Interactive Simulator", url: "#simulator" }]
+    },
+    sentiment: {
+      answer: "In the Content Moderation & Sentiment Analysis System, Ajay analyzed large-scale textual datasets utilizing Natural Language Processing (NLP) to classify user content, determine sentiment intensity, and produce automated intelligence reports supporting moderation safety decisions.",
+      sources: [{ title: "Sentiment Analysis Project", url: "#projects" }]
+    },
+    socialmedia: {
+      answer: "For the Social Media Content Analysis project, Ajay evaluated social platform engagement metrics across different media formats and posting schedules, producing interactive dashboards that translated raw data into clear growth strategies.",
+      sources: [{ title: "Social Media Analysis", url: "#projects" }]
+    },
+    education: {
+      answer: "Ajay is pursuing his B.Tech in Computer Science and Engineering at SRM Institute of Science and Technology, Ramapuram (2022–2026) with a CGPA of 7.9/10. His coursework includes Data Science, DBMS, Machine Learning, AI, DSA, Software Engineering, and NLP.",
+      sources: [{ title: "Education & Degrees", url: "#education" }]
+    },
+    certificates: {
+      answer: "Ajay holds recognized certifications in:\n1. Python Programming & MySQL\n2. Data Science with Python\n3. Generative AI — ChatGPT",
+      sources: [{ title: "Certificates", url: "#education" }]
+    },
+    contact: {
+      answer: "You can reach Ajay directly via:\n• Email: maddulaajayrathna@gmail.com\n• Phone: +91-9642177022\n• LinkedIn: linkedin.com/in/maddulaajay-rathna-287b451b1\n• GitHub: github.com/Ajay7919/Ajay-Rathna-M",
+      sources: [{ title: "Contact Ajay", url: "#contact" }]
+    },
+    resume: {
+      answer: "You can download Ajay's comprehensive resume directly using the 'Download Resume' button on the portfolio navbar, or check the Education & Experience sections.",
+      sources: [{ title: "Download Resume", url: "resume.html" }]
+    },
+    hire: {
+      answer: "Ajay is actively seeking full-time Data Analyst, Business Intelligence, or Data Science Associate positions and internships. He brings hands-on experience in SQL, Python, Tableau, and predictive analytics.",
+      sources: [{ title: "Let's Connect", url: "#contact" }]
+    }
+  };
+
+  window.toggleChatbot = function() {
+    const widget = document.getElementById('chat-widget');
+    if (!widget) return;
+    widget.classList.toggle('hidden');
+    if (!widget.classList.contains('hidden')) {
+      const inputEl = document.getElementById('chat-input');
+      if (inputEl) inputEl.focus();
+    }
+  };
+
+  window.closeChatbot = function() {
+    const widget = document.getElementById('chat-widget');
+    if (widget) widget.classList.add('hidden');
+  };
+
+  window.sendQuickChat = function(question) {
+    const widget = document.getElementById('chat-widget');
+    if (widget) widget.classList.remove('hidden');
+    if (window.handleChatQuery) {
+      window.handleChatQuery(question);
+    }
+  };
+
+  function addMessage(text, role) {
+    const messagesEl = document.getElementById('chat-messages');
+    if (!messagesEl) return null;
+    const msg = document.createElement('div');
+    msg.className = 'message ' + role;
+    msg.innerHTML = text.replace(/\n/g, '<br/>');
+    messagesEl.appendChild(msg);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    return msg;
+  }
+
+  function addSources(sources) {
+    const messagesEl = document.getElementById('chat-messages');
+    if (!messagesEl || !sources || !sources.length) return;
+    const container = document.createElement('div');
+    container.className = 'chat-sources';
+    container.innerHTML = '<span style="color:#888;">Sources:</span> ';
+    sources.forEach(s => {
+      const a = document.createElement('a');
+      a.href = s.url;
+      a.textContent = s.title;
+      a.onclick = function(e) {
+        if (s.url.startsWith('#')) {
+          e.preventDefault();
+          const target = document.querySelector(s.url);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            if (window.innerWidth < 768) {
+              window.closeChatbot();
+            }
+          }
+        }
+      };
+      container.appendChild(a);
+    });
+    messagesEl.appendChild(container);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function resolveLocalIntent(query) {
+    const q = query.toLowerCase();
+    if (q.includes('skill') || q.includes('stack') || q.includes('python') || q.includes('sql') || q.includes('tableau') || q.includes('tool')) {
+      return KNOWLEDGE_BASE.skills;
+    }
+    if (q.includes('skillforge') || q.includes('experience') || q.includes('intern') || q.includes('work') || q.includes('job')) {
+      return KNOWLEDGE_BASE.experience;
+    }
+    if (q.includes('box office') || q.includes('movie') || q.includes('revenue') || q.includes('forecasting')) {
+      return KNOWLEDGE_BASE.boxoffice;
+    }
+    if (q.includes('sentiment') || q.includes('moderation') || q.includes('nlp')) {
+      return KNOWLEDGE_BASE.sentiment;
+    }
+    if (q.includes('social media') || q.includes('engagement') || q.includes('content analysis')) {
+      return KNOWLEDGE_BASE.socialmedia;
+    }
+    if (q.includes('project')) {
+      return KNOWLEDGE_BASE.projects;
+    }
+    if (q.includes('education') || q.includes('college') || q.includes('srm') || q.includes('btech') || q.includes('degree') || q.includes('cgpa')) {
+      return KNOWLEDGE_BASE.education;
+    }
+    if (q.includes('certificat') || q.includes('course') || q.includes('chatgpt')) {
+      return KNOWLEDGE_BASE.certificates;
+    }
+    if (q.includes('contact') || q.includes('email') || q.includes('phone') || q.includes('reach') || q.includes('linkedin') || q.includes('github')) {
+      return KNOWLEDGE_BASE.contact;
+    }
+    if (q.includes('resume') || q.includes('cv') || q.includes('download')) {
+      return KNOWLEDGE_BASE.resume;
+    }
+    if (q.includes('hire') || q.includes('available') || q.includes('opportunity') || q.includes('relocate') || q.includes('role')) {
+      return KNOWLEDGE_BASE.hire;
+    }
+    if (q.includes('who are you') || q.includes('about') || q.includes('ajay') || q.includes('bio') || q.includes('profile')) {
+      return KNOWLEDGE_BASE.about;
+    }
+    return {
+      answer: "I can help you explore Ajay's background as a Data Analyst! Feel free to ask about his Skills, Internship at SkillForge, Projects (Box Office, Sentiment, Social Media), SRM Education, or Contact Details.",
+      sources: [
+        { title: "About Ajay", url: "#about" },
+        { title: "Projects", url: "#projects" },
+        { title: "Contact", url: "#contact" }
+      ]
+    };
+  }
+
+  window.handleChatQuery = function(text) {
+    const clean = (text || '').trim();
+    if (!clean) return;
+
+    const inputEl = document.getElementById('chat-input');
+    if (inputEl) inputEl.value = '';
+
+    addMessage(clean, 'user');
+    const loading = addMessage('Thinking…', 'assistant loading');
+
+    setTimeout(() => {
+      if (loading && loading.parentNode) {
+        loading.parentNode.removeChild(loading);
+      }
+      const match = resolveLocalIntent(clean);
+      addMessage(match.answer, 'assistant');
+      addSources(match.sources);
+    }, 300);
+  };
+
+  function initChatbot() {
+    const toggleBtn = document.getElementById('chat-toggle');
+    const closeBtn = document.getElementById('chat-close');
+    const formEl = document.getElementById('chat-form');
+    const messagesEl = document.getElementById('chat-messages');
+
+    if (toggleBtn) {
+      toggleBtn.onclick = function(e) {
+        e.preventDefault();
+        window.toggleChatbot();
+      };
+    }
+
+    if (closeBtn) {
+      closeBtn.onclick = function(e) {
+        e.preventDefault();
+        window.closeChatbot();
+      };
+    }
+
+    if (formEl) {
+      formEl.onsubmit = function(e) {
+        e.preventDefault();
+        const inputEl = document.getElementById('chat-input');
+        if (inputEl) {
+          window.handleChatQuery(inputEl.value);
+        }
+      };
+    }
+
+    document.querySelectorAll('[data-chat-question]').forEach(btn => {
+      btn.onclick = function(e) {
+        e.preventDefault();
+        const q = btn.getAttribute('data-chat-question');
+        window.sendQuickChat(q);
+      };
+    });
+
+    if (messagesEl && messagesEl.children.length === 0) {
+      addMessage("Hi! I'm Ajay's AI Portfolio Assistant. Ask me about his data analytics skills, projects, internship at SkillForge, or how to contact him!", 'assistant');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initChatbot);
+  } else {
+    initChatbot();
+  }
+})();
+
+</script>
+</body>
+</html>

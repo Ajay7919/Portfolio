@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maddula Ajay Rathna - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #dc2626;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background-color: #f8fafc;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 48px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+    }
+    .print-bar {
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: #dc2626;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+    }
+    .btn-back {
+      background: #334155;
+    }
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+    .title-role {
+      font-size: 18px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .contact-info a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    .contact-info a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 22px;
+    }
+    h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 700;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+    p.summary {
+      font-size: 13.5px;
+      color: #334155;
+      line-height: 1.6;
+      text-align: justify;
+    }
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+    }
+    .skill-row strong {
+      color: var(--primary);
+      min-width: 220px;
+      display: inline-block;
+    }
+    .experience-item, .project-item {
+      margin-bottom: 16px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .item-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .item-company {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .item-date {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    ul.bullets {
+      padding-left: 18px;
+      font-size: 13px;
+      color: #334155;
+    }
+    ul.bullets li {
+      margin-bottom: 4px;
+    }
+    .coursework {
+      margin-top: 6px;
+      font-size: 12.5px;
+      color: #475569;
+    }
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+      .print-bar {
+        display: none !important;
+      }
+      .resume-container {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-bar">
+    <a href="index.html" class="btn btn-back">← Back to Portfolio</a>
+    <button onclick="window.print()" class="btn">🖨️ Print / Save as PDF</button>
+  </div>
+
+  <div class="resume-container">
+    <header>
+      <h1>
+        <span>MADDULA AJAY RATHNA</span>
+        <span class="title-role">Data Analyst</span>
+      </h1>
+      <div class="contact-info">
+        <span>📧 <a href="mailto:maddulaajayrathna@gmail.com">maddulaajayrathna@gmail.com</a></span>
+        <span>📱 <a href="tel:+919642177022">+91-9642177022</a></span>
+        <span>💼 <a href="https://linkedin.com/in/maddulaajay-rathna-287b451b1" target="_blank">linkedin.com/in/maddulaajay-rathna</a></span>
+        <span>🐙 <a href="https://github.com/Ajay7919/Ajay-Rathna-M" target="_blank">github.com/Ajay7919</a></span>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Detail-oriented Data Analyst with hands-on experience gathering, cleansing, and analyzing large datasets to produce actionable business insights. Skilled in Python, SQL, and Excel, with a strong foundation in statistics, data visualization, and dashboard development. Experienced in identifying trends and patterns in complex data, coordinating with cross-functional teams to align on business priorities, and communicating findings clearly to both technical and non-technical audiences. Proven track record of improving reporting efficiency and forecast accuracy through process automation and predictive modeling.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <strong>Languages & Query Tools:</strong>
+          <span>Python, SQL, MySQL, Data Querying, Data Extraction & Transformation (ETL).</span>
+        </div>
+        <div class="skill-row">
+          <strong>Data Analysis & Visualization:</strong>
+          <span>Excel, Pandas, NumPy, Matplotlib, Seaborn, Data Dashboards, Statistical Analysis.</span>
+        </div>
+        <div class="skill-row">
+          <strong>Machine Learning / AI:</strong>
+          <span>Tableau, Scikit-learn, Microsoft Excel (Pivot Tables, Formulas), Jupyter Notebook, GitHub.</span>
+        </div>
+        <div class="skill-row">
+          <strong>Core Competencies:</strong>
+          <span>Data Cleansing, Trend & Pattern Analysis, Data Requirements Gathering, Process Improvement.</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Data Analyst Intern</span> — <span class="item-company">SkillForge</span>
+          </div>
+          <span class="item-date">2024 – 2025 | Bangalore</span>
+        </div>
+        <ul class="bullets">
+          <li>Performed data profiling and exploratory data analysis (EDA) on business datasets to identify trends, anomalies, and opportunities for improvement.</li>
+          <li>Wrote scalable SQL queries to extract, join, and transform data from relational databases, supporting stakeholder reporting and business intelligence needs.</li>
+          <li>Built interactive data visualization dashboards in Tableau that made complex analysis results easy to interpret for non-technical stakeholders.</li>
+          <li>Applied Python-based statistical analysis and data wrangling techniques to support data-driven business recommendations.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Projects</h2>
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Movie Box Office Revenue Analysis & Forecasting</span>
+          <span class="item-date">Python, Scikit-learn, Pandas</span>
+        </div>
+        <ul class="bullets">
+          <li>Collected, cleaned, and preprocessed multi-source movie datasets, then conducted exploratory data analysis to surface key revenue drivers.</li>
+          <li>Engineered features, applied ensemble learning techniques, and evaluated results to build visualizations that communicated insights for forecasting decisions.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Content Moderation & Sentiment Analysis System</span>
+          <span class="item-date">NLP, Python, Scikit-learn</span>
+        </div>
+        <ul class="bullets">
+          <li>Analyzed large-scale textual datasets using NLP techniques to classify content and gauge sentiment.</li>
+          <li>Generated analytical reports summarizing findings for content moderation decisions.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <span class="item-title">Social Media Content Analysis</span>
+          <span class="item-date">Python, SQL, Tableau</span>
+        </div>
+        <ul class="bullets">
+          <li>Analyzed social media datasets to identify engagement patterns and trends across content types.</li>
+          <li>Built reports and dashboards to translate raw data into interpretable insights for the team.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Certificates</h2>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <strong>• Python Programming & MySQL</strong> &nbsp;|&nbsp; 
+          <strong>• Data Science with Python</strong> &nbsp;|&nbsp; 
+          <strong>• Generative AI — ChatGPT</strong>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="experience-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">SRM Institute of Science and Technology, Ramapuram</span>
+            <div style="font-size: 13px; color: #475569;">Bachelor of Technology (B.Tech) – Computer Science and Engineering</div>
+          </div>
+          <div style="text-align: right;">
+            <div class="item-date">2022 – 2026 | Chennai</div>
+            <strong style="color: var(--accent); font-size: 13px;">CGPA: 7.9 / 10</strong>
+          </div>
+        </div>
+        <div class="coursework">
+          <strong>Relevant Coursework:</strong> Data Science, Database Management Systems, Machine Learning, Artificial Intelligence, Data Structures and Algorithms, Software Engineering, NLP.
+        </div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
