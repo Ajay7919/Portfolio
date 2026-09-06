@@ -1,6 +1,6 @@
 # Maddula Ajay Rathna - Data Analyst Portfolio
 
-A modern, high-performance personal portfolio website built for **Maddula Ajay Rathna**, inspired by the dark-mode aesthetic, card glow effects, and interactive features of **[sreestats.in](https://www.sreestats.in/)**.
+A modern, high-performance personal portfolio website built for **Maddula Ajay Rathna**, inspired by the dark-mode aesthetic, card glow effects, and interactive features.
 
 ---
 
